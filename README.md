@@ -29,7 +29,6 @@ An intelligent agent system that uses multiple specialized LLMs to collaborative
     # Install dependencies
     pip install -r requirements.txt
     ```
-    *Note: For the visualization feature, you must also install the Graphviz system software from [graphviz.org/download/](https://graphviz.org/download/) and ensure it is added to your system's PATH.*
 
 3.  **Run the Project**
     ```bash
@@ -41,4 +40,5 @@ An intelligent agent system that uses multiple specialized LLMs to collaborative
 
 * **Orchestrator Pattern**: A central `Orchestrator` manages the workflow, which is a clean and scalable way to control a multi-agent system. This engine is flexible and was reused for both distinct scenarios.
 * **Dual-Backend System (`FakeLLM` vs. `HuggingFaceAgent`)**: Separating the deterministic mock from the live AI allowed for fast unit testing of the application's logic, a key practice for building robust systems.
+
 * **Tool Separation**: External API interactions (even simulated ones) are kept in `tools.py` to decouple them from the core AI logic, making the system easier to maintain and extend.
